@@ -9,6 +9,7 @@ local Job = Class.new(function(self)
 end)
 
 function Job:getJob(jobName)
+    print(json.encode(self.jobs[jobName]))
     return self.jobs[jobName]
 end
 
@@ -16,8 +17,7 @@ function Job:setRequestMessages(jobConfig)
     
     for k,v in pairs(self.jobs) do
         if jobConfig[k] then
-            
-            table.insert(self.jobs[k], jobConfig[k][1])
+            self.jobs[k]["jobConfig"] = jobConfig[k]
         end
     end
 end
