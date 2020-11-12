@@ -9,7 +9,6 @@ local Job = Class.new(function(self)
 end)
 
 function Job:getJob(jobName)
-    print(json.encode(self.jobs[jobName]))
     return self.jobs[jobName]
 end
 
