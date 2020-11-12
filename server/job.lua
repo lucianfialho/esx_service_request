@@ -13,15 +13,13 @@ function Job:getJob(jobName)
 end
 
 function Job:setRequestMessages(jobConfig)
-    print(json.encode(jobConfig['ambulance']), "asd")
+    
     for k,v in pairs(self.jobs) do
         if jobConfig[k] then
-            print(json.encode(self.jobs[k]))
+            
             table.insert(self.jobs[k], jobConfig[k][1])
         end
     end
-
-    -- print(json.encode(self.jobs))
 end
 
 function Job:getPlayersInServiceByJob(jobName)
