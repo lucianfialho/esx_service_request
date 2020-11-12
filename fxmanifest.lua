@@ -13,5 +13,11 @@ client_scripts {
 }
 
 server_script {
+    'config.lua',
+    'utils/module.lua',
     'server/main.lua'
+}
+
+dependencies {
+	'es_extended',
 }
