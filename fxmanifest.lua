@@ -18,6 +18,14 @@ server_script {
     'server/main.lua'
 }
 
+
+ui_page 'service_request_hud/dist/index.html'
+
+files {
+	'service_request_hud/dist/index.html',
+}
+
+
 dependencies {
 	'es_extended',
 }
