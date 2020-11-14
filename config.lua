@@ -1,19 +1,11 @@
 Config  = {}
 Config.Jobs = {
     ['ambulance'] = {
-        ['messageRequest'] = 'messageRequest: ambulance',
+        ['title'] =  'EMS Report',
+        ['messageRequest'] = 'Solicitação de atendimento médico',
         ['playerCallbackMessage'] = 'playerCallbackMessage: ambulance',
-        ['needSendGpsLocation'] = true
-        
-    },
-    ['cardealer'] = {
-        ['messageRequest'] = 'messageRequest: cardealer',
-        ['playerCallbackMessage'] = 'playerCallbackMessage: cardealer',
-        ['needSendGpsLocation'] = false
-    },
-    ['cardealer'] = {
-        ['messageRequest'] = 'messageRequest: cardealer',
-        ['playerCallbackMessage'] = 'playerCallbackMessage: cardealer',
-        ['needSendGpsLocation'] = false
+        ['needSendGpsLocation'] = true,
+        ['haveNobodyInService'] = 'Não nenhum médico de serviço',
+        ['icon'] = 'ambulance'
     }
 }
