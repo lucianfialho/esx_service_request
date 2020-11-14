@@ -4,7 +4,6 @@ ESX = nil
 TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
 
 local Job = Class.new(function(self) 
-    self.xPlayersByJob = {}
     self.jobs = ESX.Jobs
 end)
 
@@ -22,14 +21,14 @@ function Job:setRequestMessages(jobConfig)
 end
 
 function Job:getPlayersInServiceByJob(jobName)
-
+    self.xPlayersByJob = {}
     local xPlayers = ESX.GetPlayers()
-
+    
     for i=1, #xPlayers, 1 do
         local xPlayer = ESX.GetPlayerFromId(xPlayers[i])
         
-        if xPlayer.getJob() == jobName then
-            table.insert( self.xPlayersByJob, xPlayer )
+        if xPlayer.getJob().name == jobName then
+            table.insert(self.xPlayersByJob, xPlayer )
         end
     end
 
