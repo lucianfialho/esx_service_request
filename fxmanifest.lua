@@ -19,10 +19,10 @@ server_script {
 }
 
 
-ui_page 'service_request_hud/dist/index.html'
+ui_page 'html/dist/index.html'
 
 files {
-	'service_request_hud/dist/index.html',
+	'html/dist/index.html',
 }
 
 
